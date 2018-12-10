@@ -10,17 +10,48 @@ import java.awt.Font;
 
 public class ExempleDUtilisation {
     private final Bandeau monBandeau = new Bandeau();
+    private final Rainbow monRainbow = new Rainbow(monBandeau);
+    private final Aleatoire monAleatoire = new Aleatoire(monBandeau);
+    private final PamPamPam monPamPam = new PamPamPam(monBandeau);
+    private final MotColore monMot = new MotColore(monBandeau);
     
     public static void main(String[] args) {
-	    new ExempleDUtilisation().exemple();
+        Scenario scenario = new Scenario(monBandeau);
+        scenario.envoyerLaSauce();
+    }
+    
+    public void scenario() {
+        Font font = monBandeau.getFont();
+        Color back = monBandeau.getBackground();
+        Color fore = monBandeau.getForeground();
+       
+        monBandeau.setMessage("Ceci est une présentation");
+        monBandeau.sleep(1000);
+        monBandeau.setMessage("Ne vous inquiétez pas, ça va bien se passer");
+        monBandeau.sleep(1000);
+        monBandeau.setBackground(Color.YELLOW);
+        monBandeau.sleep(1000);
+        monBandeau.setMessage("Houston, nous avons un problème");
+        monBandeau.sleep(1000);
+        monAleatoire.effectuer();
+        monBandeau.sleep(1000);
+        monBandeau.setMessage("Capitaine, je me sens pas bien...");
+        monBandeau.sleep(1000);
+        monRainbow.effectuer();
+                
+                monPamPam.effectuer();
+                monMot.effectuer();
     }
     
     public void exemple() {
         Font font = monBandeau.getFont();
         Color back = monBandeau.getBackground();
         Color fore = monBandeau.getForeground();
-
+       
         monBandeau.setMessage("Hello");
+                monRainbow.effectuer();
+                monAleatoire.effectuer();
+                monPamPam.effectuer();
 		monBandeau.sleep(1000);
 		monBandeau.setMessage("On va changer de police");
 		monBandeau.sleep(1000);
@@ -43,8 +74,8 @@ public class ExempleDUtilisation {
 		monBandeau.setMessage("On va tourner");
 		monBandeau.sleep(1000);
 		monBandeau.setMessage("On tourne...");
-		for (int i = 0; i <= 100; i++) {
-			monBandeau.setRotation(2*Math.PI*i / 100);
+		for (int i = 0; i <= 50; i++) {
+			monBandeau.setRotation(2*Math.PI*i / 50);
 			monBandeau.sleep(100);
 		}
 
@@ -59,6 +90,7 @@ public class ExempleDUtilisation {
 		monBandeau.setForeground(fore);
 		monBandeau.setBackground(back);
 		monBandeau.setMessage("Termine");
-		//System.exit(0);
+		System.exit(0);
+                
    }
 }
