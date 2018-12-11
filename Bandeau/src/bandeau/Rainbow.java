@@ -21,16 +21,16 @@ private Bandeau b;
      
      @Override
      public void effectuer(){
-         for(int i=0;i<101;i+=10){
-             Color c;
-             if(i<6){
-             b.setBackground( c = new Color(200-i,0+i,0));
-             b.sleep(200);
-             }
-             else{
-                 b.setBackground(c = new Color(150,50+i,0+i));
-                 b.sleep(200);
-             }
+         b.setMessage("Salut à tous");
+         Color c;
+         for(int i=0;i<255;i++){
+             b.setBackground( c = new Color(255-i,i,0));
+         }
+         for(int j=0;j<255;j++){
+                 b.setBackground(c = new Color(0,255-j,j));
+         }
+         for(int k=0;k<255;k++){
+                 b.setBackground(c = new Color(k,0,255-k));
          } 
      }
 }

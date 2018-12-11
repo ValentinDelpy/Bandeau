@@ -6,6 +6,7 @@
 package bandeau;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -15,15 +16,18 @@ import java.util.Random;
  */
 public class Aleatoire extends Animation{
 private Bandeau b;
+private String msg;
 
-    public Aleatoire(Bandeau ban){
+    public Aleatoire(Bandeau ban, String message){
         this.b = ban;
+        this.msg = message;
         b.setBackground(Color.WHITE);
     }
     
 @Override
     public void effectuer(){
-        b.setMessage("Ce message va être coupé");
+        b.setFont(new Font("Dialog", Font.BOLD, 15));
+        b.setMessage(msg);
         Random rand = new Random();
         b.setMessage(b.getMessage().substring(rand.nextInt(b.getMessage().length()+1)));
         b.sleep(500);

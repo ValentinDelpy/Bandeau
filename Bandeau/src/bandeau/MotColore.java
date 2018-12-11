@@ -14,20 +14,26 @@ import java.util.Random;
  */
 public class MotColore extends Animation{
 private Bandeau b;
-
-    public MotColore(Bandeau ban){
+private String msg;
+protected int duree;
+    public MotColore(Bandeau ban, String s, int duree){
         this.b = ban;
-        b.setBackground(Color.WHITE);
+        this.msg = s;
+        this.duree = duree;
     }    
     
     public void effectuer(){
         Color c;
+        b.setMessage(msg);
         Random rand = new Random();
-        boolean truet = true;
-        while(truet == true){
+        for(int i=0;i<duree;i++){
             b.setBackground(c = new Color(rand.nextInt(256),rand.nextInt(256),rand.nextInt(256)));
-            b.sleep(200);
             b.setForeground(c = new Color(rand.nextInt(256),rand.nextInt(256),rand.nextInt(256)));
+            b.sleep(1000);
         }
+    }
+    
+    public void changerDuree(int d){
+        this.duree = d;
     }
 }

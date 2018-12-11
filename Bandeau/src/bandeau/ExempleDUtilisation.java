@@ -9,39 +9,22 @@ import java.awt.Color;
 import java.awt.Font;
 
 public class ExempleDUtilisation {
-    private final Bandeau monBandeau = new Bandeau();
-    private final Rainbow monRainbow = new Rainbow(monBandeau);
-    private final Aleatoire monAleatoire = new Aleatoire(monBandeau);
-    private final PamPamPam monPamPam = new PamPamPam(monBandeau);
-    private final MotColore monMot = new MotColore(monBandeau);
+    private static Bandeau monBandeau = new Bandeau();
     
     public static void main(String[] args) {
         Scenario scenario = new Scenario(monBandeau);
+        MotColore monMot = new MotColore(monBandeau,"Ce mot change de couleur",5);
+        PamPamPam papam = new PamPamPam(monBandeau,"Pam pam pam",10);
+        Aleatoire aleat = new Aleatoire(monBandeau,"Michel Sardou et Bernard Minet");
+        Rainbow arc = new Rainbow(monBandeau);
+        scenario.ajouterEffet(monMot, 1);
+        scenario.ajouterEffet(papam,2);
+        scenario.ajouterEffet(aleat,10);
+        scenario.ajouterEffet(arc,1);
         scenario.envoyerLaSauce();
     }
     
-    public void scenario() {
-        Font font = monBandeau.getFont();
-        Color back = monBandeau.getBackground();
-        Color fore = monBandeau.getForeground();
-       
-        monBandeau.setMessage("Ceci est une présentation");
-        monBandeau.sleep(1000);
-        monBandeau.setMessage("Ne vous inquiétez pas, ça va bien se passer");
-        monBandeau.sleep(1000);
-        monBandeau.setBackground(Color.YELLOW);
-        monBandeau.sleep(1000);
-        monBandeau.setMessage("Houston, nous avons un problème");
-        monBandeau.sleep(1000);
-        monAleatoire.effectuer();
-        monBandeau.sleep(1000);
-        monBandeau.setMessage("Capitaine, je me sens pas bien...");
-        monBandeau.sleep(1000);
-        monRainbow.effectuer();
-                
-                monPamPam.effectuer();
-                monMot.effectuer();
-    }
+
     
     public void exemple() {
         Font font = monBandeau.getFont();
@@ -49,9 +32,6 @@ public class ExempleDUtilisation {
         Color fore = monBandeau.getForeground();
        
         monBandeau.setMessage("Hello");
-                monRainbow.effectuer();
-                monAleatoire.effectuer();
-                monPamPam.effectuer();
 		monBandeau.sleep(1000);
 		monBandeau.setMessage("On va changer de police");
 		monBandeau.sleep(1000);

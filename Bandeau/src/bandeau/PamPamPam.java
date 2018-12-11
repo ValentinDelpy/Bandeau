@@ -14,18 +14,23 @@ import java.awt.Font;
  */
 public class PamPamPam extends Animation{
 private Bandeau b;
+private String msg;
+private int repet;
 
-    public PamPamPam(Bandeau ban){
+
+    public PamPamPam(Bandeau ban, String message, int repetitions){
         this.b = ban;
+        this.msg = message;
+        this.repet = repetitions;
         b.setBackground(Color.WHITE);
 
     }
     
     @Override
     public void effectuer(){
-        b.setMessage("PAM PAM PAM");
+        b.setMessage(msg);
         int valeur = 5; 
-        for(int i=0;i<7;i++){
+        for(int i=0;i<repet;i++){
             if(i%2==0){
                 b.setRotation(Math.PI/4);
                 b.sleep(200);
@@ -38,5 +43,6 @@ private Bandeau b;
             }
         }
         b.setRotation(0);
+        b.sleep(1000);
     }
 }
