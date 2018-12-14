@@ -20,6 +20,7 @@ private Bandeau b;
      }
      
      @Override
+     //Change la couleur du fond en suivant les couleurs de l'arc-en-ciel.
      public void effectuer(){
          b.setMessage("Salut à tous");
          Color c;

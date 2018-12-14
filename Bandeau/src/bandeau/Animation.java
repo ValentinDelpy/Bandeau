@@ -9,6 +9,7 @@ package bandeau;
  *
  * @author vdelpy
  */
+//Classe mére
 public abstract class Animation {
 
     public Animation(){

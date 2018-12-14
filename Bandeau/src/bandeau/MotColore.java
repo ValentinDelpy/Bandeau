@@ -21,7 +21,7 @@ protected int duree;
         this.msg = s;
         this.duree = duree;
     }    
-    
+    //Change la couleur, de manière aléatoire, du fond et du texte.
     public void effectuer(){
         Color c;
         b.setMessage(msg);
@@ -32,7 +32,7 @@ protected int duree;
             b.sleep(1000);
         }
     }
-    
+    //setter de durée
     public void changerDuree(int d){
         this.duree = d;
     }

@@ -22,12 +22,12 @@ protected ArrayList<Integer> mesOccurences = new ArrayList<>();
     public Scenario(Bandeau b){
         this.monBandeau = b;
     }
-    
+    //on ajoute un effet avec son nombre d'itération
     public void ajouterEffet(Animation a, int occ){
         mesAnimations.add(a);
         mesOccurences.add(occ);
     }
-    
+    //lance le bandeau
     public void envoyerLaSauce(){
         for(Animation a : mesAnimations){
             for(int i=0;i<mesOccurences.get(mesAnimations.indexOf(a));i++){

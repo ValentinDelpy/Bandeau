@@ -25,6 +25,7 @@ private String msg;
     }
     
 @Override
+//Cette fonction découpe le mot de façon aléatoire et affiche seulement la partie séléctionnée.
     public void effectuer(){
         b.setFont(new Font("Dialog", Font.BOLD, 15));
         b.setMessage(msg);

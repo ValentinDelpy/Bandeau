@@ -25,7 +25,7 @@ private int repet;
         b.setBackground(Color.WHITE);
 
     }
-    
+    //Inclinaison du texte puis rotation a 90° dans un sens puis dans l'autre tout en faisant augmenter la police de ce texte
     @Override
     public void effectuer(){
         b.setMessage(msg);
