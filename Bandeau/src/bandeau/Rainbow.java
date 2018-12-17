@@ -14,11 +14,11 @@ import javax.swing.JPanel;
  */
 public class Rainbow extends Animation{
 private Bandeau b;
+    
+    public Rainbow(Bandeau band) {
+        super(band);
+    }
 
-     public Rainbow(Bandeau ban){
-         this.b = ban;
-     }
-     
      @Override
      //Change la couleur du fond en suivant les couleurs de l'arc-en-ciel.
      public void effectuer(){

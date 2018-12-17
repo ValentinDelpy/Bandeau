@@ -17,7 +17,7 @@ private Bandeau b;
 private String msg;
 protected int duree;
     public MotColore(Bandeau ban, String s, int duree){
-        this.b = ban;
+        super(ban);
         this.msg = s;
         this.duree = duree;
     }    

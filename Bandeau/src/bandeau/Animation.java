@@ -11,8 +11,10 @@ package bandeau;
  */
 //Classe mére
 public abstract class Animation {
+private Bandeau b;
 
-    public Animation(){
+    public Animation(Bandeau band){
+        this.b = band;
 }
     public abstract void effectuer();
 }

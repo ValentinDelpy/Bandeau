@@ -19,7 +19,7 @@ private int repet;
 
 
     public PamPamPam(Bandeau ban, String message, int repetitions){
-        this.b = ban;
+        super(ban);
         this.msg = message;
         this.repet = repetitions;
         b.setBackground(Color.WHITE);

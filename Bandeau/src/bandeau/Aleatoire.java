@@ -19,7 +19,7 @@ private Bandeau b;
 private String msg;
 
     public Aleatoire(Bandeau ban, String message){
-        this.b = ban;
+        super(ban);
         this.msg = message;
         b.setBackground(Color.WHITE);
     }
